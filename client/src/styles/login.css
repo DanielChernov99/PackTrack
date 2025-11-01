@@ -1,0 +1,71 @@
+/* Center container */
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #daedff;
+    font-family: Arial, sans-serif;
+}
+
+/* Form styling */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5em; /* spacing relative to font size */
+    padding: 2.5em; /* relative padding */
+    width: 25em; /* responsive width based on font size */
+    max-width: 90%;
+    border: 1px solid #ccc;
+    border-radius: 1em;
+    background-color: white;
+    box-shadow: 0 0.25em 0.5em rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
+}
+
+/* Labels */
+.login-form label {
+    font-size: 1em; /* relative to form font */
+    font-weight: bold;
+    display: flex;
+    flex-direction: column; /* label text above input */
+}
+
+/* Inputs */
+.login-form input {
+    padding: 0.6em 0.8em;
+    font-size: 1em; /* relative to label */
+    border: 1px solid #ccc;
+    border-radius: 0.5em;
+    width: 100%; /* fill form width */
+    box-sizing: border-box;
+}
+
+/* Button */
+.login-btn {
+    padding: 0.8em 1em;
+    font-size: 1em;
+    color: white;
+    border: none;
+    border-radius: 0.5em;
+    background-color: #5E87B0;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+
+.login-btn:hover {
+    background-color: #496a8b;
+}
+
+/* Error message */
+.error-message {
+    color: red;
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
+
+/* Register link */
+.login-form p {
+    font-size: 0.9em;
+    margin-top: 0.5em;
+}
