@@ -10,6 +10,24 @@ const Login =({setUser}) => {
     const navigate = useNavigate();
 
     const handleLogin = async (e) => {
+        e.preventDefault();
+
+        // Simple validation
+        if (!email || !password) {
+            setError("Please fill in all fields.");
+            return;
+        }
+        // Simulate login process
+        try {
+            // Here you would typically make an API call to your backend for authentication
+            const mockUser = { id: 1, name: "alice", email: "alice@gmail.com" };
+            // Simulate successful login
+            setUser(mockUser);
+            localStorage.setItem('loggedInUser', JSON.stringify(mockUser));
+            navigate("/home"); // Redirect to home page after login
+        } catch (err) {
+            setError("Invalid email or password.");
+        }
 
     }
 
@@ -19,7 +37,8 @@ const Login =({setUser}) => {
     return(
         <div className="login-container">
         {/* Login Form */}
-        <form onSubmit={handleLogin} className="login-form">         
+        <form onSubmit={handleLogin} className="login-form">  
+            <h2>Login</h2>       
             <label>
                 Email:
                 <input

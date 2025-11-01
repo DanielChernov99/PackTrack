@@ -1,11 +1,13 @@
 import React from "react";
 import Header from "./Header.jsx";
 
-const Layout = ({ children  }) => {
+const Layout = ({ children, user }) => {
+    return (
         <>
-            <Header />
-            <main>{children }</main>
-        </>    
+            <Header user={user} />
+            <main>{children}</main>
+        </>
+    );
 };
 
 export default Layout;
